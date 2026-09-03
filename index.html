@@ -1,1 +1,288 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <meta name="theme-color" content="#08090d">
+
+    <title>VELORA — Elevate Every Day</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- APP -->
+    <main class="app">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <div>
+                <p class="greeting">Good morning</p>
+                <h1>Hello, Boss <span>✦</span></h1>
+            </div>
+
+            <button class="profile-btn" id="profileBtn" aria-label="Profile">
+                <span>SB</span>
+            </button>
+
+        </header>
+
+
+        <!-- DATE -->
+        <section class="date-row">
+
+            <div>
+                <p class="today-label">TODAY</p>
+                <h2 id="currentDate">Thursday, September 3</h2>
+            </div>
+
+            <div class="day-badge">
+                <strong id="dayNumber">03</strong>
+                <small id="monthName">SEP</small>
+            </div>
+
+        </section>
+
+
+        <!-- HERO CARD -->
+        <section class="hero-card">
+
+            <div class="hero-content">
+
+                <div class="hero-icon">
+                    ✦
+                </div>
+
+                <p class="hero-small">YOUR DAY</p>
+
+                <h2>
+                    Make today<br>
+                    <span>count.</span>
+                </h2>
+
+                <p class="hero-text">
+                    Stay focused, stay organized.
+                </p>
+
+            </div>
+
+            <div class="hero-orbit">
+                <div class="orbit-dot"></div>
+                <div class="orbit-ring"></div>
+            </div>
+
+        </section>
+
+
+        <!-- QUICK STATS -->
+        <section class="section">
+
+            <div class="section-heading">
+                <h3>Today</h3>
+                <button id="viewAllBtn">View all</button>
+            </div>
+
+            <div class="stats-grid">
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <span class="stat-icon">✓</span>
+                        <span class="stat-arrow">↗</span>
+                    </div>
+
+                    <strong id="taskCount">0</strong>
+                    <p>Tasks</p>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <span class="stat-icon">◷</span>
+                        <span class="stat-arrow">↗</span>
+                    </div>
+
+                    <strong id="focusTime">0h</strong>
+                    <p>Focus time</p>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <span class="stat-icon">₹</span>
+                        <span class="stat-arrow">↗</span>
+                    </div>
+
+                    <strong id="expenseAmount">₹0</strong>
+                    <p>Spent today</p>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <span class="stat-icon">🔥</span>
+                        <span class="stat-arrow">↗</span>
+                    </div>
+
+                    <strong id="habitStreak">0</strong>
+                    <p>Day streak</p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- NEXT UP -->
+        <section class="section">
+
+            <div class="section-heading">
+                <h3>Next up</h3>
+
+                <button id="addReminderBtn" class="add-btn">
+                    +
+                </button>
+            </div>
+
+
+            <div class="empty-card" id="reminderCard">
+
+                <div class="empty-icon">
+                    ◷
+                </div>
+
+                <div>
+                    <h4>No reminders yet</h4>
+                    <p>Add something you don't want to forget.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AI CARD -->
+        <section class="ai-card" id="swityCard">
+
+            <div class="ai-avatar">
+                ✦
+            </div>
+
+            <div class="ai-info">
+
+                <span>VELORA AI</span>
+
+                <h3>Ask Swity anything.</h3>
+
+                <p>
+                    Your personal smart assistant.
+                </p>
+
+            </div>
+
+            <button class="ai-open" id="openSwity">
+                →
+            </button>
+
+        </section>
+
+
+        <!-- BOTTOM SPACE -->
+        <div class="bottom-space"></div>
+
+    </main>
+
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-nav">
+
+        <button class="nav-item active" data-page="home">
+
+            <span class="nav-icon">⌂</span>
+            <small>Home</small>
+
+        </button>
+
+
+        <button class="nav-item" data-page="tasks">
+
+            <span class="nav-icon">✓</span>
+            <small>Tasks</small>
+
+        </button>
+
+
+        <button class="nav-item ai-nav" data-page="ai">
+
+            <span class="ai-nav-circle">✦</span>
+            <small>Swity</small>
+
+        </button>
+
+
+        <button class="nav-item" data-page="money">
+
+            <span class="nav-icon">₹</span>
+            <small>Money</small>
+
+        </button>
+
+
+        <button class="nav-item" data-page="more">
+
+            <span class="nav-icon">•••</span>
+            <small>More</small>
+
+        </button>
+
+    </nav>
+
+
+    <!-- SIMPLE PROFILE PANEL -->
+    <div class="modal" id="profileModal">
+
+        <div class="modal-box">
+
+            <button class="close-modal" id="closeProfile">
+                ×
+            </button>
+
+            <div class="modal-avatar">
+                SB
+            </div>
+
+            <h2>VELORA</h2>
+
+            <p>
+                Your life, beautifully organized.
+            </p>
+
+            <button class="modal-action" id="premiumBtn">
+                ✦ Explore Premium
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
